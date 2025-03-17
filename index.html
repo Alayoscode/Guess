@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container{
+        height: 100vh;
+        display: flex;
+        background-image: url(purple.jpg);
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        
+    }
+    .holder{
+        display: grid;
+        grid-template-columns: repeat(3, 70px);
+        grid-gap: 10px;
+        margin-bottom: 10px;
+    }
+    #input1{
+        height: 40px;
+        width: 60px;
+        border: 1px solid black;
+        text-align: center;
+   }
+   #output{
+    height: 100px;
+    width: 300px;
+    border: 1px solid black;
+    background-color:  rgb(250, 249, 249);
+   }
+   .btns{
+    height: 40px;
+    width: 70px;
+   }
+   .btn{
+    height: 30px;
+    width: 100px;
+    border-radius: 10px;
+   }
+   h3{
+    color: rgb(41, 0, 41);
+    font-size: 50px;
+    font-family: "Dancing Script", cursive;
+    rotate: 30deg;    
+   }
+</style>
+<body>
+   <div class="container">
+     <h3>GUESS</h3> 
+     <div id="output" > 
+        
+
+    </div>
+   
+    <input id="input1" type="text" placeholder="value">
+
+      <div class="holder">
+    <button class="btns" onclick="addToInput0()">0</button>
+    <button class="btns" onclick="addToInput1()">1</button>
+    <button class="btns" onclick="addToInput2()">2</button>
+    <button class="btns" onclick="addToInput3()">3</button>
+    <button class="btns" onclick="addToInput4()">4</button>
+    <button class="btns" onclick="addToInput5()">5</button>
+    <button class="btns" onclick="addToInput6()">6</button>
+    <button class="btns" onclick="addToInput7()">7</button>
+    <button class="btns" onclick="addToInput8()">8</button>
+    <button class="btns" onclick="addToInput9()">9</button>
+    <button class="btns" onclick="addToInput10()">10</button>
+    <button class="btns" onclick="clearInput()">C</button>
+</div>
+
+     <button class="btn" onclick="guess1()">guess</button> 
+    </div>
+</body>
+</html>
+<script>
+
+    let input2 = document.getElementById('input1')
+    let output1 = document.getElementById('output')
+
+
+    function guess1() {
+        let get = parseInt(input2.value); 
+        let get1 = Math.ceil(Math.random()* 10)
+        if (get === get1) {
+            output1.innerHTML = 'wow you are correct your answer is '+ get +'';
+            
+        }else{
+            output1.innerHTML = 'opps you are wrong your answer is '+ get +'';
+
+        }
+
+        
+    }
+
+   
+    
+   
+
+   
+   
+
+
+
+   function addToInput0(){
+         input2.value += 0;
+     }
+     function addToInput1(){
+         input1.value += 1;
+     }
+     function addToInput2(){
+         input1.value += 2;
+     }
+     function addToInput3(){
+         input1.value += 3;
+     }
+     function addToInput4(){
+         input1.value += 4;
+     }
+     function addToInput5(){
+         input1.value += 5;
+     }
+     function addToInput6(){
+         input1.value += 6;
+     }
+     function addToInput7(){
+         input1.value += 7;
+     }
+     function addToInput8(){
+         input1.value += 8;
+     }
+     function addToInput9(){
+         input1.value += 9;
+     }
+     function addToInput10(){
+         input1.value += 10;
+     }
+     function clearInput(){
+        input1.value = ""
+     }
+    
+     function guess(){
+        let add
+     }
+   
+
+
+
+</script>
